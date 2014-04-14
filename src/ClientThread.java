@@ -23,7 +23,8 @@ public class ClientThread extends Thread{
         Client.chatArea.append("\nStarting connection...");
         try {
             try{
-                Client.socket = new Socket(Client.serverAddress.getText(), Integer.parseInt(Client.serverPort.getText()));
+                //Client.socket = new Socket(Client.serverAddress.getText(), Integer.parseInt(Client.serverPort.getText()));
+                Client.socket = new Socket("127.0.0.1", 10007);
             }catch(NumberFormatException f){
                 System.out.println("Error with server port or server address.");
                 Client.chatArea.append("\nError with server port or server address.");

@@ -5,17 +5,8 @@ import java.io.IOException;
  */
 public class InputThread extends Thread{
 
-    private String userInput;
-
     public void main(String[] args){
-        InputThread input = new InputThread();
-    }
-
-    public InputThread(){
-        start();
-    }
-
-    public void run(){
-
+        System.out.println("USER " + Client.username + " MESSAGE " + Client.chatMessage.getText());
+        Client.out.println("USER " + Client.username + " MESSAGE " + Client.chatMessage.getText());
     }
 }

@@ -2,13 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
+import java.net.*;
 
 /**
  * Created by Alexander on 4/13/14.
@@ -16,19 +11,34 @@ import java.net.SocketTimeoutException;
 public class Server extends JFrame implements ActionListener {
 
     private JPanel panel;
+    private JPanel bottom;
     protected static JButton listening;
+    protected static JLabel serverAddress;
+    protected static JLabel serverPort;
     protected static ServerSocket serverSocket = null;
     protected static boolean serverContinue = true;
     protected static boolean listenToggle = false;
     private ServerThread server;
+    private InetAddress address;
 
     public Server(){
 
+        try{
+        address = InetAddress.getLocalHost();
+        }catch(UnknownHostException f){
+            System.out.println("Unknown host.");
+        }
         panel = new JPanel(new GridLayout());
+        bottom = new JPanel(new GridLayout());
+        serverAddress = new JLabel("Address: " + address.getHostAddress());
+        serverPort =  new JLabel("Port: ");
         listening = new JButton("Start");
         listening.addActionListener(this);
-        add(panel, BorderLayout.CENTER);
+        add(panel, BorderLayout.PAGE_START);
+        add(bottom, BorderLayout.CENTER);
         panel.add(listening, BorderLayout.LINE_START);
+        bottom.add(serverAddress, BorderLayout.LINE_START);
+        bottom.add(serverPort, BorderLayout.LINE_END);
 
     }
 

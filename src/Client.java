@@ -1,14 +1,9 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-import java.io.Writer;
-import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.nio.Buffer;
 
 /**
  * Created by Alexander on 4/13/14.
@@ -24,8 +19,8 @@ public class Client extends JFrame implements ActionListener {
     protected static TextArea chatArea;
     protected static TextField serverAddress;
     protected static TextField serverPort;
-    private TextField chatMessage;
-    private String username;
+    protected static TextField chatMessage;
+    protected static String username;
     protected static boolean listenToggle;
     protected ClientThread client;
     protected InputThread input;
@@ -61,8 +56,8 @@ public class Client extends JFrame implements ActionListener {
         add(chatArea, BorderLayout.CENTER);
         add(bottom, BorderLayout.PAGE_END);
 
-
         //username = JOptionPane.showInputDialog("Enter your username.");
+        username = "testUser";
 
     }
 
@@ -79,7 +74,6 @@ public class Client extends JFrame implements ActionListener {
         if(e.getSource() == connection){
             if( listenToggle == false){
                 client = new ClientThread();
-                input = new InputThread();
             }else{
                 System.out.println("Disconnecting...");
                 chatArea.append("\nDisconnecting...");
@@ -94,6 +88,9 @@ public class Client extends JFrame implements ActionListener {
                 connection.setText("Start");
                 listenToggle = false;
             }
+        }
+        if(e.getSource() == sendMessage){
+
         }
     }
 }

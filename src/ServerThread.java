@@ -21,6 +21,7 @@ public class ServerThread extends Thread {
             try {
                 Server.serverSocket = new ServerSocket(10007);
                 // serverSocket = new ServerSocket(0);
+                Server.serverPort.setText("Port: " + Server.serverSocket.getLocalPort());
                 System.out.println ("Connection Socket Created on port " + Server.serverSocket.getLocalPort());
                 Server.listenToggle = true;
                 Server.listening.setText("Stop");
@@ -69,6 +70,7 @@ public class ServerThread extends Thread {
             }
             Server.listenToggle = false;
             Server.listening.setText("Start");
+            Server.serverPort.setText("Port: ");
         }
     }
 }
