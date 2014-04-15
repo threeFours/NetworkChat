@@ -117,7 +117,7 @@ public class UserMessage {
 	
 	/**
 	 * Returns a formatted string containing the data enclosed in the class.
-	 * @param m
+	 * @param
 	 * @return
 	 */
 	

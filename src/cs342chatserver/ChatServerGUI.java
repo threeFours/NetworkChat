@@ -8,8 +8,17 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-/**
- * Created by Alexander on 4/15/14.
+/*----------------------------------------------------------------------------
+ * Network Chat
+ *
+ * Class: CS 342 Software Design
+ *
+ * Created by Alex Schlake
+ * April 2014
+ ----------------------------------------------------------------------------*/
+/*
+ * Sets up and handles the server GUI.
+ *
  */
 public class ChatServerGUI extends JFrame implements ActionListener {
 
