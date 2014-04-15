@@ -1,3 +1,5 @@
+package cs342chatserver;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,31 +18,24 @@ public class Client extends JFrame implements ActionListener {
     private JLabel address;
     private JLabel port;
     private JButton sendMessage;
-    protected static TextArea chatArea;
-    protected static TextField serverAddress;
-    protected static TextField serverPort;
-    protected static TextField chatMessage;
-    protected static String username;
-    protected static boolean listenToggle;
-    protected ClientThread client;
-    protected InputThread input;
-    protected static Socket socket = null;
-    protected static PrintWriter out = null;
-    protected static BufferedReader in = null;
-    protected static BufferedReader stdIn = null;
+    private TextArea chatArea;
+    private TextField serverAddress;
+    private TextField serverPort;
+    private TextField chatMessage;
+    private String username;
+    private boolean listenToggle = false;
+
 
     public Client() throws IOException{
 
-        listenToggle = false;
-        stdIn = new BufferedReader(new InputStreamReader(System.in));
         top = new JPanel(new GridLayout());
         bottom = new JPanel(new GridLayout());
-        connection = new JButton("Start");
+        connection = new JButton("Connect");
         sendMessage = new JButton("Send");
         connection.addActionListener(this);
         chatArea = new TextArea();
         chatArea.setEditable(false);
-        chatMessage = new TextField(40);
+        chatMessage = new TextField(20);
         serverAddress = new TextField(20);
         address = new JLabel("Server Address", SwingConstants.RIGHT);
         serverPort = new TextField(20);
@@ -73,19 +68,14 @@ public class Client extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == connection){
             if( listenToggle == false){
-                client = new ClientThread();
+                chatArea.append("\nConnecting...");
+
+                connection.setText("Disconnect");
+                listenToggle = true;
             }else{
-                System.out.println("Disconnecting...");
                 chatArea.append("\nDisconnecting...");
-                try{
-                    out.close();
-                    in.close();
-                    stdIn.close();
-                    socket.close();
-                }catch(IOException f){
-                    System.out.println("Unable to close streams and connection.");
-                }
-                connection.setText("Start");
+
+                connection.setText("Connect");
                 listenToggle = false;
             }
         }
