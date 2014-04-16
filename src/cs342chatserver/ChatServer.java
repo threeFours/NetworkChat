@@ -266,14 +266,15 @@ public class ChatServer implements Runnable{
 							runningstring.concat(Character.toString((char) i));
 						}
 					}
-					switch(runningstring){
-						case "chat":
-							this.handleChat(ChatMessage.fromStream(r));
-						case "room":
-							this.handleRoom(RoomMessage.fromStream(r));
-						case "user":
-							this.handleUser(UserMessage.fromStream(r));
-					}
+
+                    if(runningstring.equals("chat")){
+                        this.handleChat(ChatMessage.fromStream(r));
+                    } else if(runningstring.equals("room")){
+                        this.handleRoom(RoomMessage.fromStream(r));
+                    } else if(runningstring.equals("user")){
+                        this.handleUser(UserMessage.fromStream(r));
+                    }
+
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
