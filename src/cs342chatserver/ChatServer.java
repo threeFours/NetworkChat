@@ -1,15 +1,17 @@
 package cs342chatserver;
 
 import javax.swing.*;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ChatServer{
+/**
+ *
+ */
+
+public class ChatServer implements Runnable{
 	private static ExecutorService pool = Executors.newCachedThreadPool();
 	
 	private ArrayList<ChatRoom> roomlist;
@@ -17,27 +19,39 @@ public class ChatServer{
 	private final int port;
 	private ServerSocket sock;
     private Thread t;
+
+    /**
+     *
+     * @param port
+     * @throws IOException
+     */
 	
 	public ChatServer(int port) throws IOException{
 		this.port = port;
 		this.sock = null;
 		this.roomlist = new ArrayList<ChatRoom>();
 		this.userlist = new ArrayList<User>();
+        this.t = new Thread(this);
 	}
+
+    public void stop(){
+        try {
+            if(this.sock != null) {
+                this.sock.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 	
 	public void start(){
-		try {
-			this.sock = new ServerSocket(port);
-
-			while(true){
-				Socket client = this.sock.accept();
-				pool.execute(new LogOnHandler(client,this));
-			}
-		} catch (IOException e) {
-			System.out.println("ERROR: Cannot listen on port " + Integer.toString(this.port));
-			e.printStackTrace();
-		}
+		this.t.start();
 	}
+
+    /**
+     *
+     * @return
+     */
 	
 	public String roomsToString(){
 		String s = new String();
@@ -63,6 +77,33 @@ public class ChatServer{
 		return this.userlist;
 	}
 
+    public synchronized void broadcastList(){
+        String[] ul = new String[userlist.size()];
+        int i = 0;
+        for(User u : this.userlist){
+            ul[i] = u.getNick();
+            i++;
+        }
+
+        String[] rl = new String[roomlist.size()];
+        i = 0;
+        for(ChatRoom c : this.roomlist){
+            rl[i] = c.getRoomName();
+            i++;
+        }
+
+        String liststring = new ListMessage(ul,rl).toString();
+
+        for(User u : this.userlist){
+            try {
+                ListMessage m = new ListMessage(ul,rl);
+                new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream()))).print(liststring);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 	public static void main(String[] args) throws IOException{
 
         JFrame window = new ChatServerGUI();
@@ -72,8 +113,21 @@ public class ChatServer{
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-	
-	private class LogOnHandler implements Runnable{
+
+    @Override
+    public void run() {
+        try {
+            this.sock = new ServerSocket(this.port);
+            System.out.println("Server is now listening on port " + this.port);
+            while(this.sock.isClosed() == false){
+                pool.execute(new LogOnHandler(this.sock.accept(), this));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private class LogOnHandler implements Runnable{
 
 		private Socket req;
 		private ChatServer serv;
@@ -87,8 +141,8 @@ public class ChatServer{
 		private void handleChat(ChatMessage m){
 			if(m.getUserHash() != 0){
 				boolean correctuser = false;
-				for(User u : serv.getUsers()){
-					if(u.getNick() == m.getSender() && u.hashCode() == m.getUserHash()){
+				for(User u : this.serv.getUsers()){
+					if(u.getNick().equals(m.getSender()) && u.hashCode() == m.getUserHash()){
 						correctuser = true;
 						break;
 					}
@@ -101,8 +155,8 @@ public class ChatServer{
 				System.out.println("Error: Invalid sender.");
 				return;
 			}
-			for(ChatRoom cr : serv.getRooms()){
-				if(cr.getRoomName() == m.getRoom()){
+			for(ChatRoom cr : this.serv.getRooms()){
+				if(cr.getRoomName().equals(m.getRoom())){
 					System.out.println("(" + m.getRoom() + ") " + m.getSender() +":" + m.getBody());
 					cr.broadcastMessage(m);
 					return;
@@ -112,15 +166,16 @@ public class ChatServer{
 		}
 		
 		private void handleRoom(RoomMessage m){
-			for(User u : serv.getUsers()){
-				if(u.getNick() == m.getSender() && u.hashCode() == m.getHash()){
-					if(m.getAction() == "join"){
-						for(ChatRoom cr : serv.getRooms()){
-							if(cr.getRoomName() == m.getName()){
+			for(User u : this.serv.getUsers()){
+				if(u.getNick().equals(m.getSender()) && u.hashCode() == m.getHash()){
+					if(m.getAction().equals("join")){
+						for(ChatRoom cr : this.serv.getRooms()){
+							if(cr.getRoomName().equals(m.getName())){
 								if(cr.isPrivate() == false){
 									if(cr.containsUser(u) == false){
 										System.out.println("User " + m.getSender() + " joined room " + m.getName());
 										cr.addUser(u);
+                                        serv.broadcastList();
 										return;
 									} else {
 										System.out.println("Error: User " + m.getSender() + " is already in " + m.getName());
@@ -134,12 +189,13 @@ public class ChatServer{
 						}
 						System.out.println("Error: Requested room not found.");
 						return;
-					} else if(m.getAction() == "exit"){
-						for(ChatRoom cr : serv.getRooms()){
-							if(cr.getRoomName() == m.getName()){
+					} else if(m.getAction().equals("exit")){
+						for(ChatRoom cr : this.serv.getRooms()){
+							if(cr.getRoomName().equals(m.getName())){
 								if(cr.containsUser(u)){
 									System.out.println("User " + m.getSender() + " exited room " + m.getName());
 									cr.removeUser(u);
+                                    this.serv.broadcastList();
 									return;
 								} else {
 									System.out.println("Error: User" + m.getSender() + " was not present in " + m.getName() + " and therefore cannot be removed.");
@@ -158,14 +214,32 @@ public class ChatServer{
 			System.out.println("Error: Invalid sender.");
 		}
 		
-		private void handleUser(UserMessage m){
-			//TODO GUI
-			//TODO Implement user handler.
-			//TODO Implement message broadcaster.
+		private synchronized void handleUser(UserMessage m){
+            for(User u : this.serv.getUsers()){
+                if(u.getNick().equals(m.getName()) && u.hashCode() == m.getUserHash()){
+                    u.setSocket(this.req);
+                    this.serv.broadcastList();
+                    System.out.println("User " + m.getName() + " has reconnected.");
+                    return;
+                } else if(u.getNick().equals(m.getName())){
+                    System.out.println("Error: Message hashcode does not match stored hashcode.");
+                    return;
+                }
+            }
+            User login = new User(m.getName(), this.req);
+            this.serv.getUsers().add(login);
+            try {
+                new PrintWriter(new BufferedWriter(new OutputStreamWriter(this.req.getOutputStream()))).print(new UserMessage(m.getName(), userlist.hashCode()).toString());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("User " + m.getName() + " has logged in.");
+            this.serv.broadcastList();
 		}
 		
 		@Override
 		public void run() {
+            System.out.println("Socket connection accepted from address " + this.req.getRemoteSocketAddress().toString());
 			try {
 				BufferedReader r = new BufferedReader(new InputStreamReader(req.getInputStream()));
 				while(true){

@@ -70,6 +70,7 @@ public class ChatServerGUI extends JFrame implements ActionListener {
             }else{
                 serverPort.setText("Port: ");
                 listening.setText("Connect");
+                c.stop();
                 listenToggle = false;
             }
         }

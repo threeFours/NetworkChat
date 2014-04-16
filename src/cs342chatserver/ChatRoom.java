@@ -1,10 +1,17 @@
 package cs342chatserver;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 /**
  * Contains a room name and a list of users for that chat room. Used to 
  * maintain the data of a particular room.
+ *
+ * Having a collection of users for a specific room allows for this class
+ * to be the most effective way to broadcast messages.
  * 
  * Also contains an option to prevent new users from joining, effectively creating
  * a private room.
@@ -21,17 +28,25 @@ public class ChatRoom {
 	/**
 	 * 
 	 * @param roomname
-	 * @param port
 	 */
 	
-	public ChatRoom(String roomname, int port){
+	public ChatRoom(String roomname){
 		this.roomname = roomname;
 		this.users = new ArrayList<User>();
 		this.priv = false;
 	}
 	
-	public void broadcastMessage(ChatMessage m){
-		//TODO
+	public synchronized void broadcastMessage(ChatMessage m){
+		for(User u : this.users){
+            if(u.getNick() != m.getSender()){
+                try {
+                    new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream()))).print(m.toString());
+
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
 	}
 	
 	public String getRoomName(){

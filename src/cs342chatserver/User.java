@@ -1,5 +1,6 @@
 package cs342chatserver;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Date;
@@ -45,6 +46,15 @@ public class User {
 	public Socket getSocket(){
 		return this.address;
 	}
+
+    public synchronized void setSocket(Socket s){
+        try {
+            this.address.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.address = s;
+    }
 	
 	/**
 	 * Returns the enclosing class for the IP address.

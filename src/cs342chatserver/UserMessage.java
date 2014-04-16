@@ -19,8 +19,7 @@ import java.util.ArrayList;
 public class UserMessage {
 	private String name;
 	private int hash;
-	private String[] rooms;
-	
+
 	/**
 	 * Constructor that takes a user name string.
 	 * @param name
@@ -29,19 +28,6 @@ public class UserMessage {
 	public UserMessage(String name, int hash){
 		this.name = name;
 		this.hash = hash;
-		this.rooms = null;
-	}
-	
-	/**
-	 * Constructor that takes a user name string and a list of room names.
-	 * @param name
-	 * @param rooms
-	 */
-	
-	public UserMessage(String name, int hash, String[] rooms){
-		this.name = name;
-		this.hash = hash;
-		this.rooms = rooms;
 	}
 	
 	/**
@@ -60,15 +46,6 @@ public class UserMessage {
 	
 	public int getUserHash(){
 		return this.hash;
-	}
-	
-	/**
-	 * Returns an array of room name strings.
-	 * @return
-	 */
-	
-	public String[] getRooms(){
-		return this.rooms;
 	}
 	
 	/**
@@ -100,19 +77,7 @@ public class UserMessage {
 		int h = Integer.parseInt(text.substring(++index, index+jump));
 		index += jump;
 		
-		ArrayList<String> r = new ArrayList<String>();
-		while(index < text.length()){
-			runningstring = new String();
-			while(text.charAt(index) != ':'){
-				runningstring = runningstring.concat(Character.toString(text.charAt(index)));
-				index++;
-			}
-			jump = Integer.parseInt(runningstring);
-			r.add(text.substring(++index,index+jump));
-			index += jump;
-		}
-		
-		return new UserMessage(n,h,r.toArray(new String[r.size()]));
+		return new UserMessage(n,h);
 	}
 	
 	/**
@@ -123,11 +88,7 @@ public class UserMessage {
 	
 	public String toString(){
 		String out = new String("4:user");
-		out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + Integer.toString(this.hash) + this.rooms.length + "(");
-		for(String roomname:this.rooms){
-			out.concat(Integer.toString(roomname.length()) + ":" + roomname);
-		}
-		out.concat(")");
+		out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + Integer.toString(this.hash));
 		return out;
 	}
 	
@@ -139,11 +100,13 @@ public class UserMessage {
 	 * @throws IOException
 	 */
 	
-	public static UserMessage fromStream(BufferedReader br) throws IOException{
+	public synchronized static UserMessage fromStream(BufferedReader br) throws IOException{
 		String runningstring = new String();
 		int temp;
 		int jump;
-		while(true){
+
+        //
+        while(true){
 			temp = br.read();
 			if(temp != -1){
 				char c = (char) temp;
@@ -165,7 +128,8 @@ public class UserMessage {
 			}
 		}
 		String n = new String(runningstring);
-		runningstring = new String();
+
+        runningstring = new String();
 		while(true){
 			temp = br.read();
 			if(temp != -1){
@@ -205,50 +169,6 @@ public class UserMessage {
 		String sh = new String(runningstring);
 		int h = Integer.parseInt(sh);
 		
-		runningstring = new String();
-		while(true){
-			temp = br.read();
-			if(temp != -1){
-				char c = (char) temp;
-				if(c != ':'){
-					runningstring.concat(Character.toString(c));
-				} else {
-					jump = Integer.parseInt(runningstring);
-					break;
-				}
-			} else {
-				continue;
-			}
-		}
-		String[] r = new String[jump];
-		br.read();
-		for(int i = 0;i<r.length;i++){
-			runningstring = new String();
-			while(true){
-				temp = br.read();
-				if(temp != -1){
-					char c = (char) temp;
-					if(c != ':'){
-						runningstring.concat(Character.toString(c));
-					} else {
-						jump = Integer.parseInt(runningstring);
-						break;
-					}
-				} else {
-					continue;
-				}
-			}
-			String room = new String();
-			while(room.length() < jump){
-				temp = br.read();
-				if(temp != -1){
-					room.concat(Character.toString((char) temp));
-				}
-			}
-			r[i] = room;
-		}
-		br.read();
-		
-		return new UserMessage(n,h,r);
+		return new UserMessage(n,h);
 	}
 }

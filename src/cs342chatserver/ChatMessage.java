@@ -142,7 +142,7 @@ public class ChatMessage {
 	 * @throws IOException
 	 */
 	
-	public static ChatMessage fromStream(BufferedReader br) throws IOException{
+	public synchronized static ChatMessage fromStream(BufferedReader br) throws IOException{
 		String runningstring = new String();
 		int temp;
 		int jump;

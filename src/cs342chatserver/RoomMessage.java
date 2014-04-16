@@ -189,7 +189,7 @@ public class RoomMessage {
 	 * @throws IOException
 	 */
 	
-	public static RoomMessage fromStream(BufferedReader br) throws IOException{
+	public synchronized static RoomMessage fromStream(BufferedReader br) throws IOException{
 		String runningstring = new String();
 		int temp;
 		int jump;
