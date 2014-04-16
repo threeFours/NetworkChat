@@ -1,5 +1,7 @@
 package cs342chatserver;
 
+import com.sun.corba.se.spi.activation.Server;
+
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -11,9 +13,13 @@ import java.net.UnknownHostException;
 
 public class ServerTest {
 
-    public void main(String[] args){
+    public static void main(String[] args){
+        ServerTest st = new ServerTest(args[0],args[1]);
+    }
+
+    public ServerTest(String addr, String port){
         try {
-            Socket out = new Socket(InetAddress.getByName(args[0]), Integer.parseInt(args[1]));
+            Socket out = new Socket(InetAddress.getByName(addr), Integer.parseInt(port));
             Thread t = new Thread(new ReadLoop(out));
             t.start();
             PrintWriter pw = new PrintWriter(out.getOutputStream());
