@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97d515f5-15f8-4aac-b0da-fbd4eb35a6b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cs342chatserver/ServerTest.java" afterPath="$PROJECT_DIR$/src/cs342chatserver/ServerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NetworkChat.iws" />
@@ -532,7 +531,11 @@
       <created>1397690011139</created>
       <updated>1397690011139</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test class alterations.">
+      <created>1397691524239</created>
+      <updated>1397691524239</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -583,7 +586,8 @@
     <MESSAGE value="Everything should be done for the server. Still needs a lot of testing though and I'll get started on adding comments and explanations of how this all works." />
     <MESSAGE value="Minor alterations to Message class delegation. Test class created." />
     <MESSAGE value="Test class updated." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test class updated." />
+    <MESSAGE value="Test class alterations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test class alterations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
