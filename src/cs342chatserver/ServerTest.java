@@ -20,8 +20,9 @@ public class ServerTest {
             Socket out = new Socket(InetAddress.getByName(addr), Integer.parseInt(port));
             Thread t = new Thread(new ReadLoop(out));
             t.start();
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(out.getOutputStream()));
-            bw.write(new UserMessage("joe",0).toString());
+            PrintWriter pw = new PrintWriter(new OutputStreamWriter(out.getOutputStream()),true);
+            pw.print(new UserMessage("joe",0).toString());
+            pw.flush();
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
