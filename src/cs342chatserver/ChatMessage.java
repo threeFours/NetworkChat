@@ -151,7 +151,7 @@ public class ChatMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -164,7 +164,7 @@ public class ChatMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String s = new String(runningstring);
@@ -175,7 +175,7 @@ public class ChatMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -188,7 +188,7 @@ public class ChatMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		int h = Integer.parseInt(runningstring);
@@ -199,7 +199,7 @@ public class ChatMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -212,7 +212,7 @@ public class ChatMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String r = new String(runningstring);
@@ -223,7 +223,7 @@ public class ChatMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -236,7 +236,7 @@ public class ChatMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String b = new String(runningstring);

@@ -97,7 +97,9 @@ public class ChatServer implements Runnable{
         for(User u : this.userlist){
             try {
                 ListMessage m = new ListMessage(ul,rl);
-                new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream()))).print(liststring);
+                PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream())),true);
+                pw.print(liststring);
+                pw.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -120,7 +122,9 @@ public class ChatServer implements Runnable{
             this.sock = new ServerSocket(this.port);
             System.out.println("Server is now listening on port " + this.port);
             while(this.sock.isClosed() == false){
-                pool.execute(new LogOnHandler(this.sock.accept(), this));
+                Socket sock = this.sock.accept();
+
+                pool.execute(new LogOnHandler(sock, this));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -229,7 +233,9 @@ public class ChatServer implements Runnable{
             User login = new User(m.getName(), this.req);
             this.serv.getUsers().add(login);
             try {
-                new PrintWriter(new BufferedWriter(new OutputStreamWriter(this.req.getOutputStream()))).print(new UserMessage(m.getName(), userlist.hashCode()).toString());
+                PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(this.req.getOutputStream())),true);
+                pw.print(new UserMessage(login.getNick(),login.hashCode()));
+                pw.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -242,40 +248,42 @@ public class ChatServer implements Runnable{
             System.out.println("Socket connection accepted from address " + this.req.getRemoteSocketAddress().toString());
 			try {
 				BufferedReader r = new BufferedReader(new InputStreamReader(req.getInputStream()));
-                while(true){
-					int jump = 0;
-					String runningstring = new String();
-                    while(true){
-						int i = r.read();
-						if(i != -1){
-							char c = (char) i;
-							if(c != ':'){
-								runningstring = runningstring.concat(Character.toString(c));
-							} else {
-								jump = Integer.parseInt(runningstring);
-								break;
-							}
-						}else{
-							continue;
-						}
-					}
-					runningstring = new String();
-					while(runningstring.length() < jump){
-						int i = r.read();
-						if(i != -1){
-							runningstring.concat(Character.toString((char) i));
-						}
-					}
+                if(r.ready()) {
+                    while (true) {
+                        int jump = 0;
+                        String runningstring = new String();
+                        while (true) {
+                            int i = r.read();
+                            if (i != -1) {
+                                char c = (char) i;
+                                if (c != ':') {
+                                    runningstring = runningstring.concat(Character.toString(c));
+                                } else {
+                                    jump = Integer.parseInt(runningstring);
+                                    break;
+                                }
+                            } else {
+                                return;
+                            }
+                        }
+                        runningstring = new String();
+                        while (runningstring.length() < jump) {
+                            int i = r.read();
+                            if (i != -1) {
+                                runningstring = runningstring.concat(Character.toString((char) i));
+                            }
+                        }
 
-                    if(runningstring.equals("chat")){
-                        this.handleChat(ChatMessage.fromStream(r));
-                    } else if(runningstring.equals("room")){
-                        this.handleRoom(RoomMessage.fromStream(r));
-                    } else if(runningstring.equals("user")){
-                        this.handleUser(UserMessage.fromStream(r));
+                        if (runningstring.equals("chat")) {
+                            this.handleChat(ChatMessage.fromStream(r));
+                        } else if (runningstring.equals("room")) {
+                            this.handleRoom(RoomMessage.fromStream(r));
+                        } else if (runningstring.equals("user")) {
+                            this.handleUser(UserMessage.fromStream(r));
+                        }
+
                     }
-
-				}
+                }
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
