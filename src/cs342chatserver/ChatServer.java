@@ -242,15 +242,15 @@ public class ChatServer implements Runnable{
             System.out.println("Socket connection accepted from address " + this.req.getRemoteSocketAddress().toString());
 			try {
 				BufferedReader r = new BufferedReader(new InputStreamReader(req.getInputStream()));
-				while(true){
+                while(true){
 					int jump = 0;
 					String runningstring = new String();
-					while(true){
+                    while(true){
 						int i = r.read();
 						if(i != -1){
 							char c = (char) i;
 							if(c != ':'){
-								runningstring.concat(Character.toString(c));
+								runningstring = runningstring.concat(Character.toString(c));
 							} else {
 								jump = Integer.parseInt(runningstring);
 								break;
