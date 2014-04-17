@@ -44,7 +44,7 @@ public class ServerTest {
             try {
                 BufferedReader br = new BufferedReader(new InputStreamReader(this.sock.getInputStream()));
                 while(sock.isClosed() == false){
-                    System.out.print(br.read());
+                    System.out.print((char) br.read());
                 }
             } catch (IOException e) {
                 e.printStackTrace();

@@ -97,7 +97,9 @@ public class ChatServer implements Runnable{
         for(User u : this.userlist){
             try {
                 ListMessage m = new ListMessage(ul,rl);
-                new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream()))).print(liststring);
+                PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream())),true);
+                pw.print(liststring);
+                pw.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -231,7 +233,9 @@ public class ChatServer implements Runnable{
             User login = new User(m.getName(), this.req);
             this.serv.getUsers().add(login);
             try {
-                new PrintWriter(new BufferedWriter(new OutputStreamWriter(this.req.getOutputStream()))).print(new UserMessage(m.getName(), userlist.hashCode()).toString());
+                PrintWriter pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(this.req.getOutputStream())),true);
+                pw.print(new UserMessage(login.getNick(),login.hashCode()));
+                pw.flush();
             } catch (IOException e) {
                 e.printStackTrace();
             }
