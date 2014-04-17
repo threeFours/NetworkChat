@@ -21,7 +21,7 @@ public class ServerTest {
             Thread t = new Thread(new ReadLoop(out));
             t.start();
             PrintWriter pw = new PrintWriter(new OutputStreamWriter(out.getOutputStream()),true);
-            pw.print(new UserMessage("joe",0).toString());
+            pw.print(new UserMessage("joe", 0).toString());
             pw.flush();
 
         } catch (UnknownHostException e) {
@@ -44,7 +44,9 @@ public class ServerTest {
             try {
                 BufferedReader br = new BufferedReader(new InputStreamReader(this.sock.getInputStream()));
                 while(sock.isClosed() == false){
-                    System.out.print((char) br.read());
+                    if(br.ready()) {
+                        System.out.print((char) br.read());
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
