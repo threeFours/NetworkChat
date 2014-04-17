@@ -40,7 +40,7 @@ public class ChatRoom {
 		for(User u : this.users){
             if(u.getNick() != m.getSender()){
                 try {
-                    new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream()))).print(m.toString());
+                    new PrintWriter(new BufferedWriter(new OutputStreamWriter(u.getSocket().getOutputStream())),true).print(m.toString());
 
                 } catch (IOException e){
                     e.printStackTrace();

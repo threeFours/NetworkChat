@@ -79,19 +79,19 @@ public class ListMessage {
     public String toString(){
         String s = new String("4:list");
 
-        s.concat(Integer.toString(this.users.length) + "(");
+        s = s.concat(Integer.toString(this.users.length) + "(");
 
         for(String u : this.users){
-            s.concat(Integer.toString(u.length()) + ":" + u);
+            s = s.concat(Integer.toString(u.length()) + ":" + u);
         }
 
-        s.concat(")" + Integer.toString(this.rooms.length) + "(");
+        s = s.concat(")" + Integer.toString(this.rooms.length) + "(");
 
         for(String r: this.rooms){
-            s.concat(Integer.toString(r.length()) + ":" + r);
+            s = s.concat(Integer.toString(r.length()) + ":" + r);
         }
 
-        s.concat(")");
+        s = s.concat(")");
 
         return s;
     }
@@ -102,7 +102,7 @@ public class ListMessage {
 
         while(c != '('){
             c = (char) br.read();
-            runningstring.concat(Character.toString(c));
+            runningstring = runningstring.concat(Character.toString(c));
         }
         int size = Integer.parseInt(runningstring);
 
@@ -113,13 +113,13 @@ public class ListMessage {
             c = '0';
             while(c != ':'){
                 c = (char) br.read();
-                runningstring.concat(Character.toString(c));
+                runningstring = runningstring.concat(Character.toString(c));
             }
             size = Integer.parseInt(runningstring);
 
             runningstring = new String();
             for(int j = 0; j < size; j++){
-                runningstring.concat(Character.toString((char) br.read()));
+                runningstring = runningstring.concat(Character.toString((char) br.read()));
             }
 
             users[i] = runningstring;
@@ -131,7 +131,7 @@ public class ListMessage {
 
         while(c != '('){
             c = (char) br.read();
-            runningstring.concat(Character.toString(c));
+            runningstring = runningstring.concat(Character.toString(c));
         }
         size = Integer.parseInt(runningstring);
 
@@ -142,13 +142,13 @@ public class ListMessage {
             c = '0';
             while(c != ':'){
                 c = (char) br.read();
-                runningstring.concat(Character.toString(c));
+                runningstring = runningstring.concat(Character.toString(c));
             }
             size = Integer.parseInt(runningstring);
 
             runningstring = new String();
             for(int j = 0; j < size; j++){
-                runningstring.concat(Character.toString((char) br.read()));
+                runningstring = runningstring.concat(Character.toString((char) br.read()));
             }
 
             rooms[i] = runningstring;

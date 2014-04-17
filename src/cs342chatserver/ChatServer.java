@@ -253,7 +253,7 @@ public class ChatServer implements Runnable{
                             if (i != -1) {
                                 char c = (char) i;
                                 if (c != ':') {
-                                    runningstring.concat(Character.toString(c));
+                                    runningstring = runningstring.concat(Character.toString(c));
                                 } else {
                                     jump = Integer.parseInt(runningstring);
                                     break;
@@ -266,7 +266,7 @@ public class ChatServer implements Runnable{
                         while (runningstring.length() < jump) {
                             int i = r.read();
                             if (i != -1) {
-                                runningstring.concat(Character.toString((char) i));
+                                runningstring = runningstring.concat(Character.toString((char) i));
                             }
                         }
 

@@ -88,7 +88,7 @@ public class UserMessage {
 	
 	public String toString(){
 		String out = new String("4:user");
-		out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + Integer.toString(this.hash));
+		out = out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + Integer.toString(this.hash));
 		return out;
 	}
 	
@@ -111,7 +111,7 @@ public class UserMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -124,7 +124,7 @@ public class UserMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String n = new String(runningstring);
@@ -135,7 +135,7 @@ public class UserMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -150,7 +150,7 @@ public class UserMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -163,7 +163,7 @@ public class UserMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String sh = new String(runningstring);

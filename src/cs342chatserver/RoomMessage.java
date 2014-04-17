@@ -175,10 +175,10 @@ public class RoomMessage {
 				Integer.toString(users.length) +"(");
 		
 		for(String u : users){
-			s.concat(Integer.toString(u.length()) + ":" + u);
+			s = s.concat(Integer.toString(u.length()) + ":" + u);
 		}
 		
-		s.concat(")");
+		s = s.concat(")");
 		return s;
 	}
 	
@@ -199,7 +199,7 @@ public class RoomMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -212,7 +212,7 @@ public class RoomMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String n = new String(runningstring);
@@ -224,7 +224,7 @@ public class RoomMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -237,7 +237,7 @@ public class RoomMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String s = new String(runningstring);
@@ -249,7 +249,7 @@ public class RoomMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -274,7 +274,7 @@ public class RoomMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -287,7 +287,7 @@ public class RoomMessage {
 		while(runningstring.length() < jump){
 			temp = br.read();
 			if(temp != -1){
-				runningstring.concat(Character.toString((char) temp));
+				runningstring = runningstring.concat(Character.toString((char) temp));
 			}
 		}
 		String a = new String(runningstring);
@@ -299,7 +299,7 @@ public class RoomMessage {
 			if(temp != -1){
 				char c = (char) temp;
 				if(c != ':'){
-					runningstring.concat(Character.toString(c));
+					runningstring = runningstring.concat(Character.toString(c));
 				} else {
 					jump = Integer.parseInt(runningstring);
 					break;
@@ -317,7 +317,7 @@ public class RoomMessage {
 				if(temp != -1){
 					char c = (char) temp;
 					if(c != ':'){
-						runningstring.concat(Character.toString(c));
+						runningstring = runningstring.concat(Character.toString(c));
 					} else {
 						jump = Integer.parseInt(runningstring);
 						break;
@@ -330,7 +330,7 @@ public class RoomMessage {
 			while(user.length() < jump){
 				temp = br.read();
 				if(temp != -1){
-					user.concat(Character.toString((char) temp));
+					user = user.concat(Character.toString((char) temp));
 				}
 			}
 			u[i] = user;
