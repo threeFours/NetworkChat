@@ -18,7 +18,7 @@ import java.util.concurrent.Executors;
  * April 2014
  ----------------------------------------------------------------------------*/
 /*
- * Handles everything within the client, including the GUI.
+ * Handles everything within the client.
  *
  */
 public class Client implements Runnable {
@@ -28,17 +28,29 @@ public class Client implements Runnable {
     private String serverAddress;
     private Socket socket;
     private int serverPort;
+    private String username;
     private Thread t;
 
 
-    public Client(String server, int port) throws IOException{
+    public Client(String server, int port, String user) throws IOException{
         serverAddress = server;
         serverPort = port;
+        username = user;
         this.t = new Thread(this);
     }
 
     public void start(){
         this.t.start();
+    }
+
+    public void stop(){
+        try {
+            if(this.socket != null) {
+                this.socket.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -53,11 +65,24 @@ public class Client implements Runnable {
 
     public int getServerPort(){ return serverPort; }
 
+    public void sendMessage(String messageType, String message){
+        switch (messageType){
+            case "user":
+                out.print(new UserMessage(username, 0).toString());
+                break;
+            case "chat":
+                out.print(new ChatMessage(username, 0, "room", message));
+                break;
+            case "room":
+                out.print(new RoomMessage("room", username, 0, "action"));
+                break;
+            default:
+                break;
+        }
+    }
+
     public void run(){
         try{
-            // for testing
-            //serverAddress = "127.0.0.1";
-            //serverPort = 10007;
             socket = new Socket(serverAddress, serverPort);
         }catch(IOException e){
             e.printStackTrace();
@@ -65,20 +90,7 @@ public class Client implements Runnable {
         try{
             out = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            out.print(new UserMessage("joe",0).toString());
-            System.out.println(in.read());
-            out.flush();
         }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-
-    public void stop(){
-        try {
-            if(this.socket != null) {
-                this.socket.close();
-            }
-        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -64,39 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="26" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1428">
-              <folding>
-                <element signature="e#1344#1345#0" expanded="true" />
-                <element signature="e#1368#1369#0" expanded="true" />
-                <element signature="e#1401#1402#0" expanded="true" />
-                <element signature="e#1422#1423#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientGUI.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="25" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.8154762" vertical-offset="1068" max-vertical-offset="1734">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1546#1771#0" expanded="true" />
-                <element signature="e#1760#1761#0" expanded="true" />
-                <element signature="e#1812#1813#0" expanded="true" />
-                <element signature="e#1831#1832#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="5" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4913">
+            <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="3146" max-vertical-offset="4913">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,29 +75,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatServerGUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServerGUI.java">
+      <file leaf-file-name="Client.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="54" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="1309">
-              <folding />
+            <state line="91" column="84" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.5960396" vertical-offset="1127" max-vertical-offset="1632">
+              <folding>
+                <element signature="e#1603#1604#0" expanded="true" />
+                <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
+                <element signature="e#1681#1682#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
+      <file leaf-file-name="ClientGUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="23" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="1003">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatRoom.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatRoom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1768">
-              <folding />
+            <state line="65" column="65" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1972">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1839#2278#0" expanded="true" />
+                <element signature="e#2267#2268#0" expanded="true" />
+                <element signature="e#2319#2320#0" expanded="true" />
+                <element signature="e#2338#2339#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,15 +126,15 @@
         <option value="$PROJECT_DIR$/src/Client.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/User.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatRoom.java" />
-        <option value="$PROJECT_DIR$/src/cs342chatserver/ServerTest.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/UserMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ListMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/RoomMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java" />
-        <option value="$PROJECT_DIR$/src/cs342chatserver/ChatServer.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatServerGUI.java" />
-        <option value="$PROJECT_DIR$/src/cs342chatserver/Client.java" />
+        <option value="$PROJECT_DIR$/src/cs342chatserver/ServerTest.java" />
+        <option value="$PROJECT_DIR$/src/cs342chatserver/ChatServer.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java" />
+        <option value="$PROJECT_DIR$/src/cs342chatserver/Client.java" />
       </list>
     </option>
   </component>
@@ -564,7 +537,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -573,7 +546,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39875776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18083462" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17928903" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -583,7 +556,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15300146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18083462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17928903" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -640,10 +613,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,10 +672,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,10 +710,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -768,10 +741,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -799,10 +772,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -830,10 +803,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -851,10 +824,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -863,10 +836,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -875,10 +848,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -887,10 +860,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,25 +872,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ListMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/RoomMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -928,26 +887,12 @@
             <element signature="e#774#775#0" expanded="true" />
             <element signature="e#797#798#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatRoom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="23" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0" vertical-offset="31" max-vertical-offset="1003">
           <folding />
         </state>
       </provider>
@@ -959,36 +904,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="280" selection-end="280" vertical-scroll-proportion="0.37103173" vertical-offset="0" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ListMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="-2.3759036" vertical-offset="1071" max-vertical-offset="2856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4233">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/RoomMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="8" selection-start="4247" selection-end="4247" vertical-scroll-proportion="0.0" vertical-offset="2603" max-vertical-offset="5831">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="5" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="4913">
+        <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="4421" max-vertical-offset="4913">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="61" selection-start="280" selection-end="280" vertical-scroll-proportion="0.09108911" vertical-offset="141" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="65" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1972">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1839#2278#0" expanded="true" />
+            <element signature="e#2267#2268#0" expanded="true" />
+            <element signature="e#2319#2320#0" expanded="true" />
+            <element signature="e#2338#2339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1428">
+        <state line="91" column="84" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.5960396" vertical-offset="1127" max-vertical-offset="1632">
           <folding>
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1422#1423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="25" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.8154762" vertical-offset="1068" max-vertical-offset="1734">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1546#1771#0" expanded="true" />
-            <element signature="e#1760#1761#0" expanded="true" />
-            <element signature="e#1812#1813#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
           </folding>
         </state>
       </provider>

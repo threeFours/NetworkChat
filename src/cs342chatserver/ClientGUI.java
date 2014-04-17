@@ -7,6 +7,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/*----------------------------------------------------------------------------
+ * Network Chat
+ *
+ * Class: CS 342 Software Design
+ *
+ * Created by Alex Schlake
+ * April 2014
+ ----------------------------------------------------------------------------*/
+/*
+ * Sets up the client GUI.
+ *
+ */
+
 public class ClientGUI extends JFrame implements ActionListener {
 
     private JPanel top;
@@ -49,17 +62,18 @@ public class ClientGUI extends JFrame implements ActionListener {
 
         chatMessage.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                chatArea.append("\n" + username + ": " + chatMessage.getText());
-                chatMessage.setText("");
+                if( c != null){
+                    c.sendMessage("chat", chatMessage.getText());
+                    chatArea.append("\n" + username + ": " + chatMessage.getText());
+                    chatMessage.setText("");
+                }else{
+                    chatArea.append("\nNot connected to server.");
+                }
             }
         });
     }
 
     public String getUsername(){ return username; }
-
-    public void updateChat(String text){
-        chatArea.append(text);
-    }
 
     private String setUsername() {
         return JOptionPane.showInputDialog(
@@ -75,7 +89,7 @@ public class ClientGUI extends JFrame implements ActionListener {
             if( listenToggle == false){
                 chatArea.append("\nConnecting...");
                 try{
-                    c = new Client(serverAddressInput.getText(), Integer.parseInt(serverPortInput.getText()));
+                    c = new Client(serverAddressInput.getText(), Integer.parseInt(serverPortInput.getText()), username);
                 }catch(IOException f){
                     f.printStackTrace();
                 }

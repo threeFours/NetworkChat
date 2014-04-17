@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
 public class ServerTest {
 
     public static void main(String[] args){
-        ServerTest st = new ServerTest(args[0],args[1]);
+        ServerTest st = new ServerTest("127.0.0.1", "10007");
     }
 
     public ServerTest(String addr, String port){
