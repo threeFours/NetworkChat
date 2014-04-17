@@ -146,7 +146,14 @@ public class ChatMessage {
 		String runningstring = new String();
 		int temp;
 		int jump;
-		while(true){
+
+        while(true){
+            if(br.ready()){
+                break;
+            }
+        }
+
+        while(true){
 			temp = br.read();
 			if(temp != -1){
 				char c = (char) temp;

@@ -105,7 +105,12 @@ public class UserMessage {
 		int temp;
 		int jump;
 
-        //
+        while(true){
+            if(br.ready()){
+                break;
+            }
+        }
+
         while(true){
 			temp = br.read();
 			if(temp != -1){

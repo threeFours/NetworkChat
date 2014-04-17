@@ -100,6 +100,12 @@ public class ListMessage {
         String runningstring = new String();
         char c = '0';
 
+        while(true){
+            if(br.ready()){
+                break;
+            }
+        }
+
         while(c != '('){
             c = (char) br.read();
             runningstring = runningstring.concat(Character.toString(c));

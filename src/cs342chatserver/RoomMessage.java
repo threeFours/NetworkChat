@@ -193,7 +193,14 @@ public class RoomMessage {
 		String runningstring = new String();
 		int temp;
 		int jump;
-		//Reads in room name
+
+        while(true){
+            if(br.ready()){
+                break;
+            }
+        }
+
+        //Reads in room name
 		while(true){
 			temp = br.read();
 			if(temp != -1){
