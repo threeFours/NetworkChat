@@ -88,7 +88,7 @@ public class UserMessage {
 	
 	public String toString(){
 		String out = new String("4:user");
-		out = out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + Integer.toString(this.hash));
+		out = out.concat(Integer.toString(this.name.length()) + ":" + this.name + Integer.toString(Integer.toString(this.hash).length()) + ":" + Integer.toString(this.hash));
 		return out;
 	}
 	
@@ -144,21 +144,7 @@ public class UserMessage {
 				continue;
 			}
 		}
-		
-		while(true){
-			temp = br.read();
-			if(temp != -1){
-				char c = (char) temp;
-				if(c != ':'){
-					runningstring = runningstring.concat(Character.toString(c));
-				} else {
-					jump = Integer.parseInt(runningstring);
-					break;
-				}
-			} else {
-				continue;
-			}
-		}
+
 		runningstring = new String();
 		while(runningstring.length() < jump){
 			temp = br.read();
