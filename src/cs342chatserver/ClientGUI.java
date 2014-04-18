@@ -63,7 +63,7 @@ public class ClientGUI extends JFrame implements ActionListener {
         chatMessage.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if( c != null){
-                    c.sendMessage("chat", chatMessage.getText());
+                    // c.sendMessage("chat", chatMessage.getText());
                     chatArea.append("\n" + username + ": " + chatMessage.getText());
                     chatMessage.setText("");
                 }else{
@@ -90,12 +90,13 @@ public class ClientGUI extends JFrame implements ActionListener {
                 chatArea.append("\nConnecting...");
                 try{
                     c = new Client(serverAddressInput.getText(), Integer.parseInt(serverPortInput.getText()), username);
+                    //c = new Client("127.0.0.1", 10007, username);
                 }catch(IOException f){
                     f.printStackTrace();
                 }
                 c.start();
                 connection.setText("Disconnect");
-                chatArea.append("\nConnected to " + c.getServerAddress() + ":" + c.getServerPort());
+                chatArea.append("\nUser " + username + " connected to " + c.getServerAddress() + ":" + c.getServerPort());
                 listenToggle = true;
             }else{
                 chatArea.append("\nDisconnecting...");

@@ -64,42 +64,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="169" column="17" selection-start="5209" selection-end="5209" vertical-scroll-proportion="0.0" vertical-offset="2526" max-vertical-offset="5049">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4954#4955#0" expanded="true" />
+                <element signature="e#4978#4979#0" expanded="true" />
+                <element signature="e#5011#5012#0" expanded="true" />
+                <element signature="e#5032#5033#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientGUI.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="39" selection-start="2720" selection-end="2720" vertical-scroll-proportion="1.8198433" vertical-offset="0" max-vertical-offset="1887">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ChatServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="3146" max-vertical-offset="4913">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="159" column="23" selection-start="3747" selection-end="3747" vertical-scroll-proportion="0.0" vertical-offset="2808" max-vertical-offset="4828">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
+      <file leaf-file-name="ServerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="84" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.5960396" vertical-offset="1127" max-vertical-offset="1632">
-              <folding>
-                <element signature="e#1603#1604#0" expanded="true" />
-                <element signature="e#1627#1628#0" expanded="true" />
-                <element signature="e#1660#1661#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientGUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="65" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1972">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1839#2278#0" expanded="true" />
-                <element signature="e#2267#2268#0" expanded="true" />
-                <element signature="e#2319#2320#0" expanded="true" />
-                <element signature="e#2338#2339#0" expanded="true" />
-              </folding>
+            <state line="49" column="17" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1003">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,23 +128,23 @@
         <option value="$PROJECT_DIR$/src/Client.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/User.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatRoom.java" />
-        <option value="$PROJECT_DIR$/src/cs342chatserver/UserMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ListMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/RoomMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatServerGUI.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ServerTest.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/ChatServer.java" />
-        <option value="$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java" />
+        <option value="$PROJECT_DIR$/src/cs342chatserver/UserMessage.java" />
         <option value="$PROJECT_DIR$/src/cs342chatserver/Client.java" />
+        <option value="$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -171,6 +173,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,7 +212,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,8 +538,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -545,18 +547,18 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39875776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17928903" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39833158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17413972" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25547445" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15300146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17928903" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15260416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17413972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295099" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -602,10 +604,55 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5049">
+        <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5049">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="59" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="67" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="4760" max-vertical-offset="5049">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="40" selection-start="2992" selection-end="2992" vertical-scroll-proportion="0.0" vertical-offset="1547" max-vertical-offset="2533">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5049">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -613,10 +660,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2686">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -638,9 +686,7 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -654,10 +700,7 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,10 +715,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -683,9 +727,7 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -699,10 +741,7 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,10 +749,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -721,19 +761,14 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,10 +776,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -752,19 +788,14 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -772,10 +803,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -783,19 +815,14 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,10 +830,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,8 +842,19 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -824,10 +863,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,10 +876,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -848,10 +889,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -860,32 +902,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding>
-            <element signature="e#774#775#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,20 +914,6 @@
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatRoom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServerGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="54" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="1309">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="280" selection-end="280" vertical-scroll-proportion="0.37103173" vertical-offset="0" max-vertical-offset="1700">
           <folding />
         </state>
       </provider>
@@ -918,9 +925,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java">
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServerGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="415" selection-end="415" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="4233">
+        <state line="51" column="54" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.28608924" vertical-offset="547" max-vertical-offset="1309">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="280" selection-end="280" vertical-scroll-proportion="-0.7585302" vertical-offset="765" max-vertical-offset="1700">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="17" selection-start="1374" selection-end="1374" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/UserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="20" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2805">
           <folding />
         </state>
       </provider>
@@ -932,44 +960,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="66" selection-start="8719" selection-end="8719" vertical-scroll-proportion="0.0" vertical-offset="4421" max-vertical-offset="4913">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="61" selection-start="280" selection-end="280" vertical-scroll-proportion="0.09108911" vertical-offset="141" max-vertical-offset="1003">
+        <state line="149" column="20" selection-start="3577" selection-end="3577" vertical-scroll-proportion="0.0" vertical-offset="2142" max-vertical-offset="4233">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ChatServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="65" selection-start="2016" selection-end="2016" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1972">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1839#2278#0" expanded="true" />
-            <element signature="e#2267#2268#0" expanded="true" />
-            <element signature="e#2319#2320#0" expanded="true" />
-            <element signature="e#2338#2339#0" expanded="true" />
-          </folding>
+        <state line="159" column="23" selection-start="3747" selection-end="3747" vertical-scroll-proportion="0.0" vertical-offset="2808" max-vertical-offset="4828">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cs342chatserver/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="84" selection-start="2558" selection-end="2558" vertical-scroll-proportion="0.5960396" vertical-offset="1127" max-vertical-offset="1632">
+        <state line="169" column="17" selection-start="5209" selection-end="5209" vertical-scroll-proportion="0.0" vertical-offset="2526" max-vertical-offset="5049">
           <folding>
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1660#1661#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4978#4979#0" expanded="true" />
+            <element signature="e#5011#5012#0" expanded="true" />
+            <element signature="e#5032#5033#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cs342chatserver/ClientGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="39" selection-start="2720" selection-end="2720" vertical-scroll-proportion="1.8198433" vertical-offset="0" max-vertical-offset="1887">
+          <folding />
         </state>
       </provider>
     </entry>
